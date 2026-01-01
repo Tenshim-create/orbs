@@ -2,10 +2,10 @@
 
 export default function RotatingOrb() {
   return (
-    <div className="relative flex items-center justify-center w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 mx-auto">
-      {/* Outer atmospheric glow layers */}
+    <div className="relative flex items-center justify-center w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 mx-auto group cursor-pointer">
+      {/* Outer atmospheric glow layers - enhanced on hover */}
       <div 
-        className="absolute inset-0"
+        className="absolute inset-0 transition-all duration-500 group-hover:scale-110"
         style={{
           background: 'radial-gradient(circle at center, rgba(255, 0, 0, 0.4) 0%, rgba(204, 0, 0, 0.3) 30%, rgba(153, 0, 0, 0.2) 50%, transparent 80%)',
           filter: 'blur(50px)',
@@ -14,7 +14,7 @@ export default function RotatingOrb() {
         }}
       ></div>
       <div 
-        className="absolute inset-0"
+        className="absolute inset-0 transition-all duration-500 group-hover:scale-110"
         style={{
           background: 'radial-gradient(circle at center, rgba(255, 0, 0, 0.3) 0%, rgba(204, 0, 0, 0.2) 35%, transparent 70%)',
           filter: 'blur(35px)',
@@ -23,16 +23,28 @@ export default function RotatingOrb() {
         }}
       ></div>
       
+      {/* Enhanced hover glow layer */}
+      <div 
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        style={{
+          background: 'radial-gradient(circle at center, rgba(255, 0, 0, 0.6) 0%, rgba(255, 0, 0, 0.4) 40%, rgba(204, 0, 0, 0.3) 60%, transparent 85%)',
+          filter: 'blur(60px)',
+          borderRadius: '50%',
+          transform: 'scale(1.8)',
+          zIndex: -1
+        }}
+      ></div>
+      
       {/* Main orb */}
       <div 
-        className="relative w-full h-full"
+        className="relative w-full h-full transition-all duration-500 group-hover:scale-105"
         style={{
           borderRadius: '50%'
         }}
       >
         {/* Base sphere with asymmetric gradient for visible rotation */}
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 transition-all duration-500 group-hover:shadow-[0_0_150px_rgba(255,0,0,1),0_0_300px_rgba(255,0,0,0.7),0_0_450px_rgba(255,0,0,0.5)]"
           style={{
             background: 'radial-gradient(ellipse 120% 100% at 30% 30%, rgba(255, 100, 100, 1) 0%, rgba(255, 0, 0, 0.98) 8%, rgba(230, 0, 0, 0.92) 18%, rgba(200, 0, 0, 0.85) 30%, rgba(160, 0, 0, 0.75) 42%, rgba(120, 0, 0, 0.65) 55%, rgba(80, 0, 0, 0.55) 68%, rgba(40, 0, 0, 0.45) 82%, rgba(0, 0, 0, 0.95) 95%)',
             borderRadius: '50%',
