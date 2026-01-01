@@ -16,7 +16,7 @@ export default function Home() {
       </div>
 
       {/* 2. DER MYSTISCHE ORB (CSS Only - lädt sofort) */}
-      <div className="relative z-10 mb-12 group cursor-pointer">
+      <Link href="/generate" className="relative z-10 mb-12 group cursor-pointer block">
         {/* Der äußere Glow (Atmosphäre) - subtiler beim Hover, weniger Streuung */}
         <div className="absolute inset-0 bg-cyan-500 blur-[40px] opacity-20 group-hover:opacity-35 transition-opacity duration-1000 ease-in-out rounded-full scale-120" />
         {/* Zusätzlicher subtiler Glow Layer beim Hover */}
@@ -32,7 +32,7 @@ export default function Home() {
            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(255,255,255,0.8),_transparent_20%)] blur-md" /> {/* Highlight */}
            
         </div>
-      </div>
+      </Link>
 
       {/* 3. LUXUS TYPOGRAFIE */}
       <div className="z-10 text-center space-y-6 max-w-2xl px-4">
@@ -40,7 +40,7 @@ export default function Home() {
           ORBS
         </h1>
         <p className="text-cyan-200/60 text-xs md:text-sm tracking-[0.4em] uppercase font-light">
-          Decode the Universe
+          Find Your Focus.
         </p>
       </div>
 
@@ -68,7 +68,7 @@ export default function Home() {
 
       {/* Footer Navigation (Dezent) */}
       <div className="absolute bottom-8 text-zinc-600 text-[10px] tracking-[0.2em] uppercase z-10">
-        The Architecture of Meaning
+        Neural Architect of Human Consciousness
       </div>
 
     </main>
